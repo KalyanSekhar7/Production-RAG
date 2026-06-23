@@ -1,0 +1,7 @@
+torch>=2.0
+transformers>=4.40
+tokenizers
+tqdm
+numpy
+qdrant-client>=1.9
+python-dotenv
