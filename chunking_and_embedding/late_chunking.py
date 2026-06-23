@@ -34,7 +34,6 @@ class LateChunkingEncoder:
 
     def __init__(self, model_name: str = EMBEDDING_MODEL, device: str | None = None):
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
-        self.device = "mps"
         print(f"Loading model {model_name} on {self.device}...")
         self.tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
         self.model = AutoModel.from_pretrained(model_name, trust_remote_code=True)
